@@ -1,0 +1,6 @@
+# Ignore all files and folders
+lib/**/*
+dist/**/*
+js/all.min.js
+node_modules/**/*
+assets/css/application.css

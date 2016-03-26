@@ -1,0 +1,56 @@
+@font-face {
+	font-family: "ng-icons";
+	src: url('../fonts/ng-icons.eot');
+	src: url('../fonts/ng-icons.eot?#iefix') format('eot'),
+		url('../fonts/ng-icons.woff2') format('woff2'),
+		url('../fonts/ng-icons.woff') format('woff'),
+		url('../fonts/ng-icons.ttf') format('truetype'),
+		url('../fonts/ng-icons.svg#ng-icons') format('svg');
+}
+
+@mixin icon-styles {
+	font-family: "ng-icons";
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	// speak: none; // only necessary if not using the private unicode range (firstGlyph option)
+	text-decoration: none;
+	text-transform: none;
+}
+
+%icon {
+	@include icon-styles;
+}
+
+@function icon-char($filename) {
+	$char: "";
+
+	@if $filename == 1458970529_firefox {
+		$char: "\E001";
+	}
+	@if $filename == 1458970529_firefox3 {
+		$char: "\E002";
+	}
+
+	@return $char;
+}
+
+@mixin icon($filename, $insert: before, $extend: true) {
+	&:#{$insert} {
+		@if $extend {
+			@extend %icon;
+		} @else {
+			@include icon-styles;
+		}
+		content: icon-char($filename);
+	}
+}
+
+.icon-1458970529_firefox {
+	@include icon(1458970529_firefox);
+}
+.icon-1458970529_firefox3 {
+	@include icon(1458970529_firefox3);
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="helloWorld">
+<head>
+    <meta charset="UTF-8">
+    <title>Index | ng-start</title>
+    <!--All compiled CSS-->
+    <link rel="stylesheet" href="assets/css/application.css">
+</head>
+<body>
+
+	<input type="text" ng-model="yourName" placeholder="Enter a name here">
+	<div ng-controller="helloWorldController">
+		<h1>{{message}}! {{yourName}}</h1>
+	</div>
+
+
+	<!--All compiled JavaScript-->
+	<script src="js/all.min.js"></script>
+
+	<script>
+		//Criando o módulo
+		angular.module("helloWorld", []);//O colchete é a injeção de novos módulos que trazem componentes, diretivas, filtos...
+
+		//A víew é onde eu coloquei o ng-controller é possível ter varias views no mesmo arquivo
+		angular.module("helloWorld").controller("helloWorldController", function ($scope) {
+			$scope.message = "Hello World";
+		});
+	</script>
+</body>
+</html>

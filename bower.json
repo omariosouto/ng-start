@@ -1,0 +1,29 @@
+{
+  "name": "ng-start",
+  "description": "ng-start: your starter theme to play with angular",
+  "main": "index.html",
+  "authors": [
+    "Mario Skynex"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "GitGithub",
+    "Gulp",
+    "Angular",
+    "Bower"
+
+  ],
+  "moduleType": [],
+  "homepage": "https://github.com/MarioSkynex/",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "/lib",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "angular": "^1.5.2"
+  }
+}
