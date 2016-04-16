@@ -33,6 +33,9 @@
 	@if $filename == 1458970529_firefox3 {
 		$char: "\E002";
 	}
+	@if $filename == 1458970529_firefox4 {
+		$char: "\E003";
+	}
 
 	@return $char;
 }
@@ -53,4 +56,7 @@
 }
 .icon-1458970529_firefox3 {
 	@include icon(1458970529_firefox3);
+}
+.icon-1458970529_firefox4 {
+	@include icon(1458970529_firefox4);
 }
